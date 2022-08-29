@@ -2,39 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../common.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="../catalog.css">
   <title>Catalog</title>
 </head>
 <body>
-  <header class="header">
-    <a class="header__link link" href="#">
-      <svg class="header__logo" aria-label="Логотип компании DLK" width="100" height="52" viewBox="0 0 100 52"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M0 0H18.1129C31.1202 0 40.4058 12.3713 40.4058 24.0356V27.7332C40.4058 39.3974 31.1202 51.7689 18.1129 51.7689H0V0ZM37.6192 24.0356C37.6192 13.5132 29.2167 2.77333 18.1129 2.77333H2.78661V48.9956H18.1129C29.2167 48.9956 37.6192 38.2557 37.6192 27.7333V24.0356Z"
+  <header class="header container">
+    <div class="header__wrap-nav">
+      <a class="header__link" href="../index.html">
+        <svg class="header__logo" aria-label="Логотип компании DLK" width="100" height="52" viewBox="0 0 100 52"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 0H18.1129C31.1202 0 40.4058 12.3713 40.4058 24.0356V27.7332C40.4058 39.3974 31.1202 51.7689 18.1129 51.7689H0V0ZM37.6192 24.0356C37.6192 13.5132 29.2167 2.77333 18.1129 2.77333H2.78661V48.9956H18.1129C29.2167 48.9956 37.6192 38.2557 37.6192 27.7333V24.0356Z"
+                fill="#1E0606"/>
+          <path d="M46.4435 0H49.2301V49.2267H64.092V52H46.4435V0Z" fill="#1E0606"/>
+          <path
+              d="M67.8074 0V51.7689H70.5941V27.3833L71.278 26.7025L96.0884 51.7689H100L73.2485 24.7414L98.1084 0H94.1675L70.5941 23.4612V0H67.8074Z"
               fill="#1E0606"/>
-        <path d="M46.4435 0H49.2301V49.2267H64.092V52H46.4435V0Z" fill="#1E0606"/>
-        <path
-            d="M67.8074 0V51.7689H70.5941V27.3833L71.278 26.7025L96.0884 51.7689H100L73.2485 24.7414L98.1084 0H94.1675L70.5941 23.4612V0H67.8074Z"
-            fill="#1E0606"/>
-      </svg>
-    </a>
+        </svg>
+      </a>
 
-    <ul class="header__list-menu">
-      <li class="header__list-menu__item">
-        <a class="header__list-menu__link link" href="./blog.html">Blog</a>
-      </li>
 
-      <li class="header__list-menu__item">
-        <a class="header__list-menu__link link" aria-label="" href="./catalog.html">Catalog</a>
-      </li>
+      <nav class="header__nav">
+        <ul class="header__list-menu">
+          <li class="header__list-menu__item">
+            <a class="header__list-menu__link" href="./blog.html">Blog</a>
+          </li>
 
-      <li class="header__list-menu__item">
-        <a class="header__list-menu__link link" href="#">About Us</a>
-      </li>
-    </ul>
+          <li class="header__list-menu__item">
+            <a class="header__list-menu__link">Catalog</a>
+          </li>
 
-    <div class="header__inner-wrap">
+          <li class="header__list-menu__item">
+            <a class="header__list-menu__link" href="#">About Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__wrap-search">
       <svg class="header__search" aria-label="поиск" width="24" height="24" viewBox="0 0 24 24" fill="none"
            xmlns="http://www.w3.org/2000/svg">
         <path
@@ -42,13 +53,13 @@
             fill="black"/>
       </svg>
 
-      <a class="header__contact link" href="./contact.html">Contact Us</a>
+      <a class="header__contact-link" href="./contact.html">Contact Us</a>
     </div>
   </header>
 
   <main>
     <section class="page-title">
-      <h1 class="page-title__title">Category Products</h1>
+      <h1 class="page-title__title main-title">Category Products</h1>
 
       <ul class="page-title__crumbs">
         <li class="page-title__crumbs__item">
@@ -62,46 +73,54 @@
     </section>
 
     <section class="category-products">
-      <ul class="category-products__categories">
-        <li class="category-products__categories__item">
-          <a class="category-products__categories__link" href="#">
-            <img class="category-products__categories__img" src="../img/pullover.jpg" alt="Голубая кофта с рисунками">
-            <h2 class="category-products__categories__title">Apparel kids</h2>
+      <h2 class="visually-hidden">Категория продуктов</h2>
+
+      <ul class="categories">
+        <li class="categories__item">
+          <img class="categories__img" width="280" height="270" src="../img/pullover.jpg"
+               alt="Голубая кофта с рисунками">
+          <a class="categories__link" href="#">
+            <h3 class="categories__subtitle">Apparel kids</h3>
           </a>
         </li>
 
-        <li class="category-products__categories__item">
-          <a class="category-products__categories__link" href="#">
-            <img class="category-products__categories__img" src="../img/sock.jpg" alt="Носок цвета и формы оленя">
-            <h2 class="category-products__categories__title">Holiday shop</h2>
+        <li class="categories__item">
+          <img class="categories__img" width="280" height="270" src="../img/sock.jpg"
+               alt="Носок цвета и формы оленя">
+          <a class="categories__link" href="#">
+            <h3 class="categories__subtitle">Holiday shop</h3>
           </a>
         </li>
 
-        <li class="category-products__categories__item">
-          <a class="category-products__categories__link" href="./toys.html">
-            <img class="category-products__categories__img" src="../img/deer.jpg" alt="Игрушечный олень из дерева">
-            <h2 class="category-products__categories__title">Toys</h2>
+        <li class="categories__item">
+          <img class="categories__img" width="280" height="270" src="../img/deer.jpg"
+               alt="Игрушечный олень из дерева">
+          <a class="categories__link" href="./toys.html">
+            <h3 class="categories__subtitle">Toys</h3>
           </a>
         </li>
 
-        <li class="category-products__categories__item">
-          <a class="category-products__categories__link" href="#">
-            <img class="category-products__categories__img" src="../img/snowman.jpg" alt="Нарисованный человек-обезьяна на скейте">
-            <h2 class="category-products__categories__title">Accessories</h2>
+        <li class="categories__item">
+          <img class="categories__img" width="280" height="270" src="../img/snowman.jpg"
+               alt="Нарисованный человек-обезьяна на скейте">
+          <a class="categories__link" href="#">
+            <h3 class="categories__subtitle">Accessories</h3>
           </a>
         </li>
 
-        <li class="category-products__categories__item">
-          <a class="category-products__categories__link" href="#">
-            <img class="category-products__categories__img" src="../img/flamingos.jpg" alt="Надувной розовый фломинго">
-            <h2 class="category-products__categories__title">Sale</h2>
+        <li class="categories__item">
+            <img class="categories__img" width="280" height="270" src="../img/flamingos.jpg"
+                 alt="Надувной розовый фломинго">
+          <a class="categories__link" href="#">
+            <h3 class="categories__subtitle">Sale</h3>
           </a>
         </li>
 
-        <li class="category-products__categories__item">
-          <a class="category-products__categories__link" href="#">
-            <img class="category-products__categories__img" src="../img/dress.jpg" alt="Розовое платье с мордочками кроликов">
-            <h2 class="category-products__categories__title">Apparel adults</h2>
+        <li class="categories__item">
+            <img class="categories__img" width="280" height="270" src="../img/dress.jpg"
+                 alt="Розовое платье с мордочками кроликов">
+          <a class="categories__link" href="#">
+            <h3 class="categories__subtitle">Apparel adults</h3>
           </a>
         </li>
       </ul>
