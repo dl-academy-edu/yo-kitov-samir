@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="./normalize.css">
-  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/common.css">
   <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
       rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style/style.css">
   <title>DL Academy - Personal HTML/CSS projec</title>
 </head>
 
@@ -232,27 +232,27 @@
         <h2 class="footer__navigation__title">Navigation</h2>
         <ul class="footer__navigation__list">
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">About Us</a>
+            <a href="#" class="footer__navigation__list-link">About Us</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Blog</a>
+            <a href="./pages/blog.html" class="footer__navigation__list-link">Blog</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Design Services</a>
+            <a href="#" class="footer__navigation__list-link">Design Services</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Featured On</a>
+            <a href="#" class="footer__navigation__list-link">Featured On</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">2018 Holiday Catalog</a>
+            <a href="#" class="footer__navigation__list-link">2018 Holiday Catalog</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Shop By Designer</a>
+            <a href="#" class="footer__navigation__list-link">Shop By Designer</a>
           </li>
 
         </ul>
@@ -262,27 +262,27 @@
         <h2 class="footer__navigation__title">Customer Information</h2>
         <ul class="footer__navigation__list">
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Contact Us</a>
+            <a href="./pages/contact.html" class="footer__navigation__list-link">Contact Us</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Sale Exclusions</a>
+            <a href="#" class="footer__navigation__list-link">Sale Exclusions</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Shipping & Returns</a>
+            <a href="#" class="footer__navigation__list-link">Shipping & Returns</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Terms & Conditions</a>
+            <a href="#" class="footer__navigation__list-link">Terms & Conditions</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Privacy Policy</a>
+            <a href="#" class="footer__navigation__list-link">Privacy Policy</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Search</a>
+            <a href="#" class="footer__navigation__list-link">Search</a>
           </li>
         </ul>
       </section>
@@ -302,19 +302,19 @@
 
         <ul class="footer__navigation__list footer-list">
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--feecbook"></a>
+            <a href="https://ru-ru.facebook.com/" class="footer-list__link footer-list__link--feecbook"></a>
           </li>
 
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--twitter"></a>
+            <a href="https://twitter.com/?lang=ru" class="footer-list__link footer-list__link--twitter"></a>
           </li>
 
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--pinterest"></a>
+            <a href="https://ru.pinterest.com/" class="footer-list__link footer-list__link--pinterest"></a>
           </li>
 
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--instagram"></a>
+            <a href="https://www.instagram.com/" class="footer-list__link footer-list__link--instagram"></a>
           </li>
         </ul>
       </section>
@@ -357,34 +357,44 @@
     </div>
   </footer>
 
-  <section class="feedback">
-    <h2 class="">Обратная связь</h2>
-    <button class="feedback__close"></button>
+  <section class="feedback popup">
+    <h2 class="visually-hidden">Обратная связь</h2>
 
     <form class="feedback-form" action="" method="post" name="form-popup">
       <fieldset class="feedback-form__data fieldset">
-        <label class="" for="name">Name</label>
-        <input class="feedback-form__data__name" id="name" type="text" name="name">
+        <div class="feedback-form__wrap-input">
+          <label class="feedback-form__data__label" for="name">Name</label>
+          <input class="feedback-form__data__input" id="name" type="text" name="name">
+        </div>
 
-        <label class="" for="phone">Phone</label>
-        <input class="feedback-form__data__phone" id="phone" type="text" name="phone">
+        <div class="feedback-form__wrap-input feedback-form__wrap-input--phone">
+          <label class="feedback-form__data__label" for="phone">Phone</label>
+          <input class="feedback-form__data__input" id="phone" type="text" name="phone">
+        </div>
 
-        <label class="" for="email">Email</label>
-        <input class="feedback-form__data__email" id="email" type="email" name="email">
+        <div class="feedback-form__wrap-input feedback-form__wrap-input--email">
+          <label class="feedback-form__data__label" for="email">Email</label>
+          <input class="feedback-form__data__input" id="email" type="email" name="email">
+        </div>
 
-        <label class="" for="message">Message</label>
-        <textarea class="feedback-form__data__message" id="message" name="message"></textarea>
+        <div class="feedback-form__wrap-input">
+          <label class="feedback-form__data__label" for="message">Message</label>
+          <textarea class="feedback-form__data__input feedback-form__data__input--textarea" id="message" name="message"></textarea>
+        </div>
       </fieldset>
 
-      <fieldset class="feedback-form__personal-data fieldset">
-        <label class="" for="agreement">By clicking on the button, you consent to the processing of your personal
+      <fieldset class="feedback-form__personal-data fieldset checkbox-wrap">
+        <input class="visually-hidden checkbox" id="agreement" type="checkbox" name="agreement">
+        <label class="feedback-form__personal-data__label checkbox-homemade" for="agreement">By clicking on the button, you consent to the processing of your personal
                                         data
         </label>
-        <input class="feedback-form__personal-data__agreement" id="agreement" type="checkbox" name="agreement">
       </fieldset>
 
-      <button class="feedback-form__submit" type="submit" disabled>Submit</button>
+      <button class="feedback-form__submit link" type="submit" disabled>Submit</button>
+
+      <button class="popup__close" aria-label="Закрыть попап"></button>
     </form>
+
   </section>
 </body>
 </html>

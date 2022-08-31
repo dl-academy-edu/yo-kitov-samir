@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  background: url(./img/monster.png) no-repeat 82% -1px, linear-gradient(var(--basic-white) 18%, var(--bg-slider) 18%);
+  background: url(../img/monster.png) no-repeat 82% -1px, linear-gradient(var(--basic-white) 18%, var(--bg-slider) 18%);
 
   padding-top: 105px;
 }
@@ -39,6 +39,7 @@
   height: 3px;
   margin-bottom: 11px;
   background-color: var(--light-brow);
+  cursor: pointer;
 }
 
 .slider__navigation__item--active .slider__navigation__button {
@@ -250,4 +251,54 @@
 
 .about-contacts__map {
   margin-bottom: -156px;
+}
+
+/**popup**/
+/*popup*/
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--document-disabled);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__close {
+  top: 0;
+  right: -35px;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: initial;
+}
+
+.popup__close:after,
+.popup__close:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -2px;
+
+  width: 20px;
+  height: 3px;
+
+  border-radius: 2px;
+
+  background-color: var(--basic-white);
+}
+
+.popup__close:after {
+  transform: rotate(45deg);
+}
+
+.popup__close:before {
+  transform: rotate(-45deg);
 }
