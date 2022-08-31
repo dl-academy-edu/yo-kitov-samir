@@ -75,6 +75,10 @@
   margin-bottom: 20px;
 }
 
+.slider__info__btn {
+  padding: 11px 22px;
+}
+
 /*slider__delivery*/
 .slider__delivery-text {
   background-color: var(--brow);
@@ -266,9 +270,13 @@
   height: 100%;
   background-color: var(--document-disabled);
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
+}
+
+.popup--active {
+  display: flex;
 }
 
 .popup__close {

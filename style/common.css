@@ -62,6 +62,7 @@ button {
   padding: 0;
   border: none;
   background-color: var(--basic-white);
+  cursor: pointer;
 }
 
 a {
