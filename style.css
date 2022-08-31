@@ -3,13 +3,14 @@
   display: flex;
   flex-wrap: wrap;
 
-  background: linear-gradient(var(--basic-white) 17%, var(--bg-slider) 17%);
-  padding-top: 102px;
+  background: url(./img/monster.png) no-repeat 82% -1px, linear-gradient(var(--basic-white) 18%, var(--bg-slider) 18%);
+
+  padding-top: 105px;
 }
 
 /*slider navigation*/
 .slider__navigation {
-  margin: 0 44px 0 28px;
+  margin: 0 44px 0 30px;
   order: 1;
 }
 
@@ -149,7 +150,7 @@
 /*services*/
 .services {
   display: flex;
-  padding-right: 89px;
+  padding-right: 91px;
 }
 
 .services__inner-wrap {
@@ -157,11 +158,11 @@
 }
 
 .services__list {
-  margin-bottom: 19px;
+  margin-bottom: 23px;
 }
 
 .services__title {
-  margin: 31px 0 6px;
+  margin: 31px 0 5px;
 }
 
 .services__list-item__button {
@@ -172,8 +173,8 @@
   line-height: 34px;
 
   min-width: 326px;
-  padding: 11px 60px;
-  margin: -1px 0 0 -60px;
+  padding: 10px 60px 9px;
+  margin: 1px 0 0 -60px;
 }
 
 .services__list-item--active .services__list-item__button {
