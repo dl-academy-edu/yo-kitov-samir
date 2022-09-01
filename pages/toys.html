@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style/normalize.css">
+  <link rel="stylesheet" href="../style/common.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="../style/toys.css">
   <title>Toys</title>
 </head>
 <body>
@@ -40,7 +46,7 @@
     </div>
 
     <div class="header__wrap-search">
-      <svg class="header__search" aria-label="поиск" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      <svg class="header__search" aria-label="поиск" tabindex="0" width="24" height="24" viewBox="0 0 24 24" fill="none"
            xmlns="http://www.w3.org/2000/svg">
         <path
             d="M14.3651 3.26001C10.9451 3.26001 8.16509 6.08001 8.16509 9.52001C8.16509 10.98 8.6651 12.3 9.4851 13.38L3.6051 19.32C3.2651 19.68 3.2651 20.24 3.6051 20.58C3.7851 20.76 4.0051 20.84 4.2251 20.84C4.4651 20.84 4.6851 20.76 4.8651 20.58L10.7451 14.62C11.7651 15.36 13.0051 15.78 14.3451 15.78C17.7651 15.78 20.5451 12.96 20.5451 9.52001C20.5651 6.06001 17.7851 3.26001 14.3651 3.26001ZM14.3651 14.2C11.8251 14.2 9.76509 12.1 9.76509 9.52001C9.76509 6.94001 11.8251 4.84001 14.3651 4.84001C16.9051 4.84001 18.9651 6.94001 18.9651 9.52001C18.9651 12.1 16.9051 14.2 14.3651 14.2ZM17.4651 9.60001C17.4251 9.94001 17.1251 10.2 16.7851 10.2C16.7451 10.2 16.7251 10.2 16.6851 10.2C16.3051 10.14 16.0451 9.80001 16.0851 9.42001C16.2251 8.38001 15.0651 7.84001 15.0051 7.82001C14.6651 7.66001 14.5051 7.24001 14.6651 6.90001C14.8251 6.56001 15.2251 6.40001 15.5851 6.54001C15.6651 6.56001 17.7451 7.52001 17.4651 9.60001ZM16.0051 11.12C16.1451 11.26 16.2451 11.48 16.2451 11.68C16.2451 11.9 16.1651 12.1 16.0051 12.24C15.8651 12.38 15.6451 12.48 15.4451 12.48C15.2451 12.48 15.0251 12.4 14.8851 12.24C14.7451 12.1 14.6451 11.88 14.6451 11.68C14.6451 11.48 14.7251 11.26 14.8851 11.12C15.0251 10.98 15.2451 10.88 15.4451 10.88C15.6451 10.88 15.8451 10.96 16.0051 11.12Z"
@@ -52,7 +58,7 @@
   </header>
 
   <main>
-    <section class="page-title">
+    <section class="page-title container">
       <h1 class="page-title__title main-title">Toy for kids</h1>
 
       <ul class="page-title__crumbs">
@@ -64,20 +70,21 @@
           <a href="./catalog.html" class="page-title__crumbs__link">Catalog</a>
         </li>
 
-        <li class="page-title__crumbs__item">
+        <li class="page-title__crumbs__item page-title__crumbs__item--active">
           <a class="page-title__crumbs__link"> Toys</a>
         </li>
       </ul>
     </section>
 
     <section class="options">
-      <h2 class="options__title">Настройки формы</h2>
-      <form class="options__form" name="options" action="" method="get">
-        <fieldset class="options__form__slider">
-          <legend class="options__form__slider__title">Cost</legend>
+      <h2 class="visually-hidden">Настройки формы</h2>
+      <form class="options__form container" name="options" action="" method="get">
+        <fieldset class="options__form__slider-wrap fieldset">
+          <legend class="options__form__title">Cost</legend>
 
-          <label class="" for="range"></label>
-          <input class="options__form__slider__range" id="range" type="range" name="range" min="0" max="500" value="150">
+          <label class="visually-hidden" for="range">Ползунок диапозона</label>
+          <input class="options__form__range" id="range" type="range" name="range" min="0" max="500"
+                 value="103">
 
           <div class="options__form__slider__wrap-numbers">
             <span class="options__form__slider__number">0</span>
@@ -85,116 +92,119 @@
           </div>
         </fieldset>
 
-        <fieldset class="options__form__color">
-          <legend class="options__form__color__title">Color</legend>
+        <fieldset class="options__form__color fieldset">
+          <legend class="options__form__title">Color</legend>
 
-          <div class="options__form__color__inner-wrap">
-            <label class="options__form__color__label" for="black">Black</label>
-            <input class="options__form__color__input" id="black" type="checkbox" name="black" checked>
+          <div class="options__form__color__inner-wrap checkbox-wrap">
+            <input class="visually-hidden checkbox" id="black" type="checkbox" name="black" checked>
+            <label class="options__form__color__label checkbox__homemade" for="black">Black</label>
           </div>
 
-          <div class="options__form__color__inner-wrap">
-            <label class="options__form__color__label" for="blue">Blue</label>
-            <input class="options__form__color__input" id="blue" type="checkbox" name="blue">
+          <div class="options__form__color__inner-wrap checkbox-wrap">
+            <input class="visually-hidden checkbox" id="blue" type="checkbox" name="blue">
+            <label class="options__form__color__label checkbox__homemade" for="blue">Blue</label>
           </div>
 
-          <div class="options__form__color__inner-wrap">
-            <label class="options__form__color__label" for="green">Green</label>
-            <input class="options__form__color__input" id="green" type="checkbox" name="green">
+          <div class="options__form__color__inner-wrap checkbox-wrap">
+            <input class="visually-hidden checkbox" id="green" type="checkbox" name="green">
+            <label class="options__form__color__label checkbox__homemade" for="green">Green</label>
           </div>
 
-          <div class="options__form__color__inner-wrap">
-            <label class="options__form__color__label" for="white">White</label>
-            <input class="options__form__color__input" id="white" type="checkbox" name="white">
+          <div class="options__form__color__inner-wrap checkbox-wrap">
+            <input class="visually-hidden checkbox" id="white" type="checkbox" name="white">
+            <label class="options__form__color__label checkbox__homemade" for="white">White</label>
           </div>
         </fieldset>
 
-        <fieldset class="options__form__delivery">
-          <legend class="options__form__delivery__title">Delivery</legend>
+        <fieldset class="options__form__delivery fieldset">
+          <legend class="options__form__title">Delivery</legend>
 
           <div class="options__form__delivery__inner-wrap">
+            <input class="options__form__delivery__radio visually-hidden" type="radio" name="shipping" id="free">
             <label class="options__form__delivery__label" for="free">Free shipping</label>
-            <input class="options__form__delivery__radio" type="radio" name="shipping" id="free">
           </div>
 
           <div class="options__form__delivery__inner-wrap">
+            <input class="options__form__delivery__radio visually-hidden" type="radio" name="shipping" id="fast"
+                   checked>
             <label class="options__form__delivery__label" for="fast">Fast shipping</label>
-            <input class="options__form__delivery__radio" type="radio" name="shipping" id="fast" checked>
           </div>
         </fieldset>
 
-        <fieldset class="options__form__amount">
-          <legend class="options__form__amount__title">Amount</legend>
+        <fieldset class="options__form__amount fieldset">
+          <legend class="options__form__title">Amount</legend>
 
           <div class="options__form__amount__inner-wrap">
+            <input class="options__form__amount__radio visually-hidden" type="radio" name="amount" id="min" checked>
             <label class="options__form__amount__label" for="min">0-5</label>
-            <input class="options__form__amount__input" type="radio" name="amount" id="min" checked>
           </div>
 
           <div class="options__form__amount__inner-wrap">
+            <input class="options__form__amount__radio visually-hidden" type="radio" name="amount" id="mid">
             <label class="options__form__amount__label" for="mid">10-20</label>
-            <input class="options__form__amount__input" type="radio" name="amount" id="mid">
           </div>
 
           <div class="options__form__amount__inner-wrap">
+            <input class="options__form__amount__radio visually-hidden" type="radio" name="amount" id="max">
             <label class="options__form__amount__label" for="max">20-50</label>
-            <input class="options__form__amount__input" type="radio" name="amount" id="max">
           </div>
         </fieldset>
 
-        <button class="options__form__submit" type="submit">Apply</button>
+        <button class="options__form__submit link" type="submit">Apply</button>
       </form>
     </section>
 
-    <section class="toys">
-      <h2 class="toys__title">Каталог продуктов</h2>
+    <section class="toys container">
+      <h2 class="visually-hidden">Каталог продуктов</h2>
 
       <div class="slaider">
         <div class="slaider__ribbon">
           <ul class="slaider__list">
             <li class="slaider__item">
-              <img class="slaider__img" src="../img/sharky.jpg" alt="Чехол для стула в виде синей акулы с раскрытой пастью">
-              <h3 class="slaider__name">Sharky bean bag chair cover</h3>
+              <h3 class="slaider__name-toy">Sharky bean bag chair cover</h3>
+              <img class="slaider__img" src="../img/sharky.jpg"
+                   alt="Чехол для стула в виде синей акулы с раскрытой пастью">
               <span class="slaider__prise">$60.00 USD</span>
             </li>
 
             <li class="slaider__item">
+              <h3 class="slaider__name-toy">Brass deco frames</h3>
               <img class="slaider__img" src="../img/pendant.jpg" alt="Подвеска золотистого цвета">
-              <h3 class="slaider__name">Brass deco frames</h3>
               <span class="slaider__prise">$66.00 USD</span>
             </li>
 
             <li class="slaider__item">
+              <h3 class="slaider__name-toy">Cibo full apron</h3>
               <img class="slaider__img" src="../img/apron.jpg" alt="Чёрный фартук с полосатой вставкой и лямками">
-              <h3 class="slaider__name">Cibo full apron</h3>
               <span class="slaider__prise">$60.00 USD</span>
             </li>
 
             <li class="slaider__item">
+              <h3 class="slaider__name-toy">Gatcha gatcha gumball machine</h3>
               <img class="slaider__img" src="../img/gatcha.jpg" alt="Изображение товара">
-              <h3 class="slaider__name">Gatcha gatcha gumball machine</h3>
               <span class="slaider__prise">$56.00 USD</span>
             </li>
 
             <li class="slaider__item">
+              <h3 class="slaider__name-toy">Christmas advent scented candle</h3>
               <img class="slaider__img" src="../img/christmas_candle.jpg" alt="Ароматическая свеча с таблицей из цыфр">
-              <h3 class="slaider__name">Christmas advent scented candle</h3>
               <span class="slaider__prise">$29.00 USD</span>
             </li>
 
             <li class="slaider__item">
+              <h3 class="slaider__name-toy">Tangle spinning tea light</h3>
               <img class="slaider__img" src="../img/tea_candle.jpg" alt="Вращающаяся чайная свеча">
-              <h3 class="slaider__name">Tangle spinning tea light</h3>
               <span class="slaider__prise">$56.00 USD</span>
             </li>
           </ul>
         </div>
 
         <div class="slaider__controls">
-          <button class="slaider__controls__arrow slaider__controls__arrow--left"></button>
+          <button class="slaider__controls__arrow slaider__controls__arrow--left " aria-label="Стрелка переключения слайдера влево"></button>
+
           <ul class="slaider__controls__dots">
             <li class="slaider__controls__dot">
-              <button class="slaider__controls__button">1</button>
+              <button class="slaider__controls__button slaider__controls__button--active">1</button>
             </li>
 
             <li class="slaider__controls__dot">
@@ -208,185 +218,132 @@
             <li class="slaider__controls__dot">
               <button class="slaider__controls__button">4</button>
             </li>
-
           </ul>
-          <button class="slaider__controls__arrow slaider__controls__arrow--right"></button>
+
+          <button class="slaider__controls__arrow slaider__controls__arrow--right" aria-label="Стрелка переключения слайдера вправо"></button>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__inner-wrap">
+    <div class="footer__inner-wrap container">
       <section class="footer__navigation">
         <h2 class="footer__navigation__title">Navigation</h2>
         <ul class="footer__navigation__list">
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">About Us</a>
+            <a href="#" class="footer__navigation__list-link">About Us</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Blog</a>
+            <a href="./pages/blog.html" class="footer__navigation__list-link">Blog</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Design Services</a>
+            <a href="#" class="footer__navigation__list-link">Design Services</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Featured On</a>
+            <a href="#" class="footer__navigation__list-link">Featured On</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">2018 Holiday Catalog</a>
+            <a href="#" class="footer__navigation__list-link">2018 Holiday Catalog</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Shop By Designer</a>
+            <a href="#" class="footer__navigation__list-link">Shop By Designer</a>
           </li>
 
         </ul>
       </section>
 
-      <section class="footer__customer-information">
-        <h2 class="footer__customer-information__title">Customer Information</h2>
-        <ul class="footer__customer-information__list">
-          <li class="footer__customer-information__list-item">
-            <a href="" class="footer__customer-information__list-link">Contact Us</a>
+      <section class="footer__navigation">
+        <h2 class="footer__navigation__title">Customer Information</h2>
+        <ul class="footer__navigation__list">
+          <li class="footer__navigation__list-item">
+            <a href="./pages/contact.html" class="footer__navigation__list-link">Contact Us</a>
           </li>
 
-          <li class="footer__customer-information__list-item">
-            <a href="" class="footer__customer-information__list-link">Sale Exclusions</a>
+          <li class="footer__navigation__list-item">
+            <a href="#" class="footer__navigation__list-link">Sale Exclusions</a>
           </li>
 
-          <li class="footer__customer-information__list-item">
-            <a href="" class="footer__customer-information__list-link">Shipping & Returns</a>
+          <li class="footer__navigation__list-item">
+            <a href="#" class="footer__navigation__list-link">Shipping & Returns</a>
           </li>
 
-          <li class="footer__customer-information__list-item">
-            <a href="" class="footer__customer-information__list-link">Terms & Conditions</a>
+          <li class="footer__navigation__list-item">
+            <a href="#" class="footer__navigation__list-link">Terms & Conditions</a>
           </li>
 
-          <li class="footer__customer-information__list-item">
-            <a href="" class="footer__customer-information__list-link">Privacy Policy</a>
+          <li class="footer__navigation__list-item">
+            <a href="#" class="footer__navigation__list-link">Privacy Policy</a>
           </li>
 
-          <li class="footer__customer-information__list-item">
-            <a href="" class="footer__customer-information__list-link">Search</a>
+          <li class="footer__navigation__list-item">
+            <a href="#" class="footer__navigation__list-link">Search</a>
           </li>
         </ul>
       </section>
 
-      <section class="footer__connect">
-        <h2 class="footer__connect__title">Connect</h2>
+      <section class="footer__navigation">
+        <h2 class="footer__navigation__title">Connect</h2>
 
-        <form class="footer__connect__form" action="#" name="join" method="post">
-          <fieldset class="footer__connect__wrap-join">
-            <label class="footer__connect__email-label" for="footer-email">Введите свой email чтобы присоединиться к
-                                                                           нам</label>
-            <input class="footer__connect__email" id="footer-email" type="email" name="email" value="Email">
+        <form class="footer__navigation__form" action="#" name="join" method="post">
+          <fieldset class="footer__navigation__wrap-join">
+            <label class="visually-hidden" for="footer-email">Введите свой email чтобы присоединиться к
+                                                              нам</label>
+            <input class="footer__navigation__email" id="footer-email" type="email" name="email" value="Email">
           </fieldset>
 
-          <button class="footer__connect__submit" type="submit">Join</button>
+          <button class="footer__navigation__submit link" type="submit">Join</button>
         </form>
 
-        <ul class="footer__connect__list">
-          <li class="footer__connect__list-item">
-            <a href="" class="footer__connect__list-link">
-              <svg class="footer__connect__list-img footer__connect__list-img--feecbook" width="9" height="16"
-                   viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M8.55271 3.36723H6.29671C6.03071 3.36723 5.73372 3.71723 5.73372 4.18523V5.81423H8.55271V8.13523H5.73372V15.1052H3.07071V8.13523H0.657715V5.81423H3.07071V4.44723C3.07071 2.48823 4.43171 0.894226 6.29671 0.894226H8.55271V3.36723Z"
-                      fill="white"/>
-              </svg>
-            </a>
+        <ul class="footer__navigation__list footer-list">
+          <li class="footer-list__item">
+            <a href="https://ru-ru.facebook.com/" class="footer-list__link footer-list__link--feecbook"></a>
           </li>
 
-          <li class="footer__connect__list-item">
-            <a href="" class="footer__connect__list-link">
-              <svg class="footer__connect__list-img footer__connect__list-img--twitter" width="15" height="13"
-                   viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M13.1006 3.28912C13.1056 3.41612 13.1096 3.54312 13.1096 3.67212C13.1096 7.57612 10.1366 12.0781 4.70258 12.0781C3.03458 12.0781 1.48058 11.5881 0.173584 10.7501C0.406584 10.7771 0.641584 10.7911 0.879584 10.7911C2.26358 10.7911 3.53758 10.3181 4.54858 9.52512C3.25558 9.50212 2.16558 8.64812 1.78758 7.47512C1.96858 7.51012 2.15458 7.52712 2.34458 7.52712C2.61358 7.52712 2.87458 7.49212 3.12258 7.42412C1.77158 7.15212 0.751584 5.95912 0.751584 4.52712V4.49012C1.15058 4.71112 1.60758 4.84412 2.09158 4.85912C1.29858 4.33012 0.777584 3.42612 0.777584 2.40012C0.777584 1.85912 0.922584 1.35212 1.17658 0.916122C2.63258 2.70312 4.81058 3.87912 7.26558 4.00212C7.21558 3.78512 7.19058 3.56012 7.19058 3.32812C7.19058 1.69712 8.51258 0.375122 10.1446 0.375122C10.9936 0.375122 11.7616 0.732122 12.2996 1.30712C12.9736 1.17612 13.6056 0.930122 14.1766 0.590122C13.9556 1.28112 13.4886 1.85912 12.8766 2.22512C13.4746 2.15412 14.0446 1.99612 14.5756 1.76012C14.1776 2.35212 13.6776 2.87312 13.1006 3.28912Z"
-                      fill="white"/>
-              </svg>
-            </a>
+          <li class="footer-list__item">
+            <a href="https://twitter.com/?lang=ru" class="footer-list__link footer-list__link--twitter"></a>
           </li>
 
-          <li class="footer__connect__list-item">
-            <a href="" class="footer__connect__list-link">
-              <svg class="footer__connect__list-img footer__connect__list-img--pinterest" width="16" height="16"
-                   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M8.00047 0C3.58252 0 0 3.58158 0 8.00047C0 11.2754 1.97001 14.0902 4.78956 15.3273C4.76698 14.7694 4.78579 14.0977 4.92785 13.49C5.08214 12.8408 5.95708 9.1313 5.95708 9.1313C5.95708 9.1313 5.70212 8.62045 5.70212 7.865C5.70212 6.6796 6.38984 5.79432 7.24502 5.79432C7.97225 5.79432 8.3241 6.34092 8.3241 6.99571C8.3241 7.7267 7.85747 8.82084 7.61757 9.83407C7.41718 10.6836 8.04281 11.3751 8.88011 11.3751C10.3957 11.3751 11.4165 9.42859 11.4165 7.12177C11.4165 5.36908 10.2358 4.05668 8.08796 4.05668C5.66167 4.05668 4.14982 5.86582 4.14982 7.88663C4.14982 8.5847 4.35491 9.07579 4.67666 9.45587C4.82531 9.6318 4.84506 9.70142 4.79144 9.90275C4.75381 10.0486 4.66537 10.4042 4.62868 10.5444C4.57506 10.7466 4.41136 10.82 4.22885 10.7448C3.11025 10.2885 2.58999 9.0645 2.58999 7.68813C2.58999 5.41612 4.50638 2.68972 8.30717 2.68972C11.3619 2.68972 13.3724 4.90151 13.3724 7.27324C13.3724 10.4117 11.6282 12.7562 9.05509 12.7562C8.19239 12.7562 7.37955 12.2895 7.10108 11.7599C7.10108 11.7599 6.63633 13.6029 6.53848 13.9585C6.36914 14.5747 6.03704 15.1919 5.73317 15.6717C6.45287 15.8843 7.21303 16 8.00047 16C12.4184 16 16 12.4184 16 8.00047C16 3.58158 12.4184 0 8.00047 0Z"
-                      fill="white"/>
-              </svg>
-            </a>
+          <li class="footer-list__item">
+            <a href="https://ru.pinterest.com/" class="footer-list__link footer-list__link--pinterest"></a>
           </li>
 
-          <li class="footer__connect__list-item">
-            <a href="" class="footer__connect__list-link">
-              <svg class="footer__connect__list-img footer__connect__list-img--instagram" width="16" height="16"
-                   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M8.00003 0C5.82733 0 5.5549 0.0092 4.70163 0.0481333C3.8501 0.0869667 3.26857 0.222233 2.7597 0.42C2.23363 0.624433 1.7875 0.897967 1.3427 1.3427C0.897967 1.7875 0.624433 2.23363 0.42 2.7597C0.222233 3.26857 0.0869667 3.8501 0.0481333 4.7016C0.0092 5.5549 0 5.82733 0 8C0 10.1727 0.0092 10.4451 0.0481333 11.2984C0.0869667 12.1499 0.222233 12.7314 0.42 13.2403C0.624433 13.7664 0.897967 14.2125 1.3427 14.6573C1.7875 15.102 2.23363 15.3756 2.7597 15.58C3.26857 15.7778 3.8501 15.913 4.70163 15.9519C5.5549 15.9908 5.82733 16 8.00003 16C10.1727 16 10.4451 15.9908 11.2984 15.9519C12.1499 15.913 12.7314 15.7778 13.2403 15.58C13.7664 15.3756 14.2125 15.102 14.6573 14.6573C15.102 14.2125 15.3756 13.7664 15.58 13.2403C15.7778 12.7314 15.913 12.1499 15.9519 11.2984C15.9908 10.4451 16 10.1727 16 8C16 5.82733 15.9908 5.5549 15.9519 4.7016C15.913 3.8501 15.7778 3.26857 15.58 2.7597C15.3756 2.23363 15.102 1.7875 14.6573 1.3427C14.2125 0.897967 13.7664 0.624433 13.2403 0.42C12.7314 0.222233 12.1499 0.0869667 11.2984 0.0481333C10.4451 0.0092 10.1727 0 8.00003 0ZM8.00003 1.44143C10.1361 1.44143 10.3891 1.4496 11.2327 1.4881C12.0127 1.52367 12.4363 1.65397 12.7182 1.76353C13.0916 1.90867 13.3581 2.08203 13.638 2.362C13.918 2.6419 14.0913 2.9084 14.2365 3.28183C14.346 3.56373 14.4763 3.98733 14.5119 4.7673C14.5504 5.61087 14.5586 5.8639 14.5586 8C14.5586 10.1361 14.5504 10.3891 14.5119 11.2327C14.4763 12.0127 14.346 12.4363 14.2365 12.7182C14.0913 13.0916 13.918 13.3581 13.638 13.638C13.3581 13.918 13.0916 14.0913 12.7182 14.2365C12.4363 14.346 12.0127 14.4763 11.2327 14.5119C10.3892 14.5504 10.1363 14.5586 8.00003 14.5586C5.86373 14.5586 5.61077 14.5504 4.7673 14.5119C3.98733 14.4763 3.56373 14.346 3.28183 14.2365C2.9084 14.0913 2.64193 13.918 2.36197 13.638C2.08207 13.3581 1.90867 13.0916 1.76353 12.7182C1.65397 12.4363 1.52367 12.0127 1.4881 11.2327C1.4496 10.3891 1.44143 10.1361 1.44143 8C1.44143 5.8639 1.4496 5.61087 1.4881 4.7673C1.52367 3.98733 1.65397 3.56373 1.76353 3.28183C1.90867 2.9084 2.08203 2.6419 2.36197 2.362C2.64193 2.08203 2.9084 1.90867 3.28183 1.76353C3.56373 1.65397 3.98733 1.52367 4.7673 1.4881C5.61087 1.4496 5.8639 1.44143 8.00003 1.44143ZM3.8919 8C3.8919 5.73113 5.73113 3.8919 8.00003 3.8919C10.2689 3.8919 12.1081 5.73113 12.1081 8C12.1081 10.2689 10.2689 12.1081 8.00003 12.1081C5.73113 12.1081 3.8919 10.2689 3.8919 8ZM8.00003 10.6667C6.52723 10.6667 5.33333 9.47277 5.33333 8C5.33333 6.52723 6.52723 5.33333 8.00003 5.33333C9.47277 5.33333 10.6667 6.52723 10.6667 8C10.6667 9.47277 9.47277 10.6667 8.00003 10.6667ZM12.2704 4.68957C12.8006 4.68957 13.2304 4.2598 13.2304 3.7296C13.2304 3.1994 12.8006 2.76957 12.2704 2.76957C11.7402 2.76957 11.3104 3.1994 11.3104 3.7296C11.3104 4.2598 11.7402 4.68957 12.2704 4.68957Z"
-                      fill="white"/>
-              </svg>
-            </a>
+          <li class="footer-list__item">
+            <a href="https://www.instagram.com/" class="footer-list__link footer-list__link--instagram"></a>
           </li>
         </ul>
       </section>
 
       <div class="footer__info">
         <div class="footer__info__rating">
+          <div class="footer__info__wrap-stars">
+            <input class="footer__info__rating__radio footer__info__rating__radio--1" aria-label="Поставить 1 звезду"
+                   type="radio"
+                   name="star" id="star1">
+
+            <input class="footer__info__rating__radio footer__info__rating__radio--2" aria-label="Поставить 2 звезды"
+                   type="radio"
+                   name="star" id="star2">
+
+            <input class="footer__info__rating__radio footer__info__rating__radio--3" aria-label="Поставить 3 звезды"
+                   type="radio"
+                   name="star" id="star3">
+
+            <input class="footer__info__rating__radio footer__info__rating__radio--4" aria-label="Поставить 4 звезды"
+                   type="radio"
+                   name="star" id="star4">
+
+            <input class="footer__info__rating__radio footer__info__rating__radio--5" aria-label="Поставить 5 звезд"
+                   type="radio"
+                   name="star" id="star5">
+          </div>
+
           <p class="footer__info__rating__text">Company Rating</p>
-
-          <ul class="footer__info__rating__list">
-            <li class="footer__info__rating__list-item">
-              <svg class="footer__info__rating__list-img" width="14" height="13" viewBox="0 0 14 13" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
-                    fill="#0E0E0E"/>
-              </svg>
-            </li>
-
-            <li class="footer__info__rating__list-item">
-              <svg class="footer__info__rating__list-img" width="14" height="13" viewBox="0 0 14 13" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
-                    fill="#0E0E0E"/>
-              </svg>
-            </li>
-
-            <li class="footer__info__rating__list-item">
-              <svg class="footer__info__rating__list-img" width="14" height="13" viewBox="0 0 14 13" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
-                    fill="#0E0E0E"/>
-              </svg>
-            </li>
-
-            <li class="footer__info__rating__list-item">
-              <svg class="footer__info__rating__list-img" width="14" height="13" viewBox="0 0 14 13" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
-                    fill="#0E0E0E"/>
-              </svg>
-            </li>
-
-            <li class="footer__info__rating__list-item">
-              <svg class="footer__info__rating__list-img" width="14" height="13" viewBox="0 0 14 13" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
-                    fill="#0E0E0E"/>
-              </svg>
-            </li>
-          </ul>
         </div>
 
         <div class="footer__info__copyright">
@@ -394,10 +351,12 @@
         </div>
 
         <div class="footer__info__developer">
-          <p class="footer__info__developer__text">Web Design — Direct Line Development</p>
+          <a href="#" class="footer__info__developer__link">Web Design — Direct Line Development</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <script src="../js/toys.js"></script>
 </body>
 </html>

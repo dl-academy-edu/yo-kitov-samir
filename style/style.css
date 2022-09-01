@@ -75,8 +75,12 @@
   margin-bottom: 20px;
 }
 
-.slider__info__btn {
-  padding: 11px 22px;
+.slider__info__btn:hover {
+  background-color: var(--brow);
+}
+
+.slider__info__btn:active {
+  background-color: var(--btn-active);
 }
 
 /*slider__delivery*/
@@ -286,6 +290,14 @@
   width: 17px;
   height: 17px;
   background-color: initial;
+}
+
+.popup__close:hover {
+  opacity: 0.7;
+}
+
+.popup__close:active {
+  opacity: 0.4;
 }
 
 .popup__close:after,
