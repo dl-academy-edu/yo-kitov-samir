@@ -1,0 +1,34 @@
+/**categories**/
+.categories {
+  margin-bottom: 59px;
+}
+
+.categories__item:nth-child(7n-3) {
+  margin-left: 200px;
+}
+
+/**product-description**/
+.product-description {
+  padding: 0 0 40px 200px;
+}
+
+.product-description__title {
+  margin-bottom: 25px;
+}
+
+.product-description__text {
+  margin-bottom: 15px;
+  max-width: 680px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -109,6 +109,12 @@
   margin-bottom: 30px;
 }
 
+/*products-slider__slides*/
+.products-slider__slides {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
 /*products-slider__navigation*/
 .products-slider__navigation__arrow {
   display: inline-block;
@@ -163,6 +169,9 @@
 }
 
 .services__inner-wrap {
+  flex-basis: 609px;
+  padding-left: 122px;
+
   order: 1;
 }
 
@@ -200,7 +209,10 @@
 }
 
 .services__img {
-  margin-right: 121px;
+  width: 480px;
+  height: 559px;
+  background-image: url("../img/delivery_woman.jpg");
+  background-color: var(--light-blue);
 }
 
 /**partners**/
