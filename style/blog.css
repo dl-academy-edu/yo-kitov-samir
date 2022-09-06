@@ -1,0 +1,43 @@
+/*slaider*/
+.slaider__list {
+  padding: 0;
+  text-align: left;
+}
+
+.slaider__item {
+  margin-bottom: 13px;
+}
+
+.slaider__name {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: inherit;
+
+  margin-bottom: 14px;
+
+  order: 3;
+}
+
+.slaider__img {
+  margin-bottom: 20px;
+}
+
+.slaider__time {
+  color: var(--text-time);
+  order: 2;
+  margin-bottom: 8px;
+}
+
+.slaider__text {
+  font-size: 18px;
+  line-height: 25px;
+
+  order: 3;
+}
+
+/*slaider__controls*/
+.slaider__controls {
+  padding: 39px 5px 63px;
+}

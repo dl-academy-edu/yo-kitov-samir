@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="./normalize.css">
-  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/common.css">
   <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
       rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style/style.css">
   <title>DL Academy - Personal HTML/CSS projec</title>
 </head>
 
@@ -47,7 +47,7 @@
     </div>
 
     <div class="header__wrap-search">
-      <svg class="header__search" aria-label="поиск" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      <svg class="header__search" aria-label="поиск" tabindex="0" width="24" height="24" viewBox="0 0 24 24" fill="none"
            xmlns="http://www.w3.org/2000/svg">
         <path
             d="M14.3651 3.26001C10.9451 3.26001 8.16509 6.08001 8.16509 9.52001C8.16509 10.98 8.6651 12.3 9.4851 13.38L3.6051 19.32C3.2651 19.68 3.2651 20.24 3.6051 20.58C3.7851 20.76 4.0051 20.84 4.2251 20.84C4.4651 20.84 4.6851 20.76 4.8651 20.58L10.7451 14.62C11.7651 15.36 13.0051 15.78 14.3451 15.78C17.7651 15.78 20.5451 12.96 20.5451 9.52001C20.5651 6.06001 17.7851 3.26001 14.3651 3.26001ZM14.3651 14.2C11.8251 14.2 9.76509 12.1 9.76509 9.52001C9.76509 6.94001 11.8251 4.84001 14.3651 4.84001C16.9051 4.84001 18.9651 6.94001 18.9651 9.52001C18.9651 12.1 16.9051 14.2 14.3651 14.2ZM17.4651 9.60001C17.4251 9.94001 17.1251 10.2 16.7851 10.2C16.7451 10.2 16.7251 10.2 16.6851 10.2C16.3051 10.14 16.0451 9.80001 16.0851 9.42001C16.2251 8.38001 15.0651 7.84001 15.0051 7.82001C14.6651 7.66001 14.5051 7.24001 14.6651 6.90001C14.8251 6.56001 15.2251 6.40001 15.5851 6.54001C15.6651 6.56001 17.7451 7.52001 17.4651 9.60001ZM16.0051 11.12C16.1451 11.26 16.2451 11.48 16.2451 11.68C16.2451 11.9 16.1651 12.1 16.0051 12.24C15.8651 12.38 15.6451 12.48 15.4451 12.48C15.2451 12.48 15.0251 12.4 14.8851 12.24C14.7451 12.1 14.6451 11.88 14.6451 11.68C14.6451 11.48 14.7251 11.26 14.8851 11.12C15.0251 10.98 15.2451 10.88 15.4451 10.88C15.6451 10.88 15.8451 10.96 16.0051 11.12Z"
@@ -63,7 +63,7 @@
       <div class="slider__info">
         <h1 class="slider__info__title main-title">The ooh noo collection</h1>
         <p class="slider__info__subtitle">Designed in Slovenia</p>
-        <a class="slider__info__link link" href="">Explore now</a>
+        <button class="slider__info__btn link">Explore now</button>
       </div>
 
       <div class="slider__navigation">
@@ -98,7 +98,7 @@
         <li class="products-slider__slide categories__item">
           <img class="products-slider__slide__img categories__img" width="280" height="270" src="./img/pullover.jpg"
                alt="Голубая кофта с рисунками">
-          <a class="products-slider__slide__link categories__link">
+          <a class="products-slider__slide__link categories__link" href="#">
             <h3 class="products-slider__subtitle categories__subtitle">Apparel kids</h3>
           </a>
         </li>
@@ -106,7 +106,7 @@
         <li class="products-slider__slide categories__item">
           <img class="products-slider__slide__img categories__img" width="280" height="270" src="./img/sock.jpg"
                alt="Носок цвета и формы оленя">
-          <a class="products-slider__slide__link categories__link">
+          <a class="products-slider__slide__link categories__link" href="#">
             <h3 class="products-slider__subtitle categories__subtitle">Holiday shop</h3>
           </a>
         </li>
@@ -122,8 +122,24 @@
         <li class="products-slider__slide categories__item">
           <img class="products-slider__slide__img categories__img" width="280" height="270" src="./img/snowman.jpg"
                alt="Нарисованный человек-обезьяна на скейте">
-          <a class="products-slider__slide__link categories__link">
+          <a class="products-slider__slide__link categories__link" href="#">
             <h3 class="products-slider__subtitle categories__subtitle">Accessories</h3>
+          </a>
+        </li>
+
+        <li class="categories__item">
+          <img class="categories__img" width="280" height="270" src="./img/flamingos.jpg"
+               alt="Надувной розовый фломинго">
+          <a class="categories__link" href="#">
+            <h3 class="categories__subtitle">Sale</h3>
+          </a>
+        </li>
+
+        <li class="categories__item">
+          <img class="categories__img" width="280" height="270" src="./img/dress.jpg"
+               alt="Розовое платье с мордочками кроликов">
+          <a class="categories__link" href="#">
+            <h3 class="categories__subtitle">Apparel adults</h3>
           </a>
         </li>
       </ul>
@@ -169,8 +185,9 @@
         <a class="services__link link" href="#">Learn more</a>
       </div>
 
-      <img class="services__img" width="480" height="559" src="./img/delivery_woman.jpg"
-           alt="Девушка с татуировкой на левой руке, светлыми волосами и в белом платье с квадратиками на нём">
+      <div class="services__img"></div>
+      <!--      <img class="services__img" width="480" height="559" src="./img/delivery_woman.jpg"-->
+      <!--           alt="Девушка с татуировкой на левой руке, светлыми волосами и в белом платье с квадратиками на нём">-->
     </section>
 
     <section class="partners container">
@@ -232,27 +249,27 @@
         <h2 class="footer__navigation__title">Navigation</h2>
         <ul class="footer__navigation__list">
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">About Us</a>
+            <a href="#" class="footer__navigation__list-link">About Us</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Blog</a>
+            <a href="./pages/blog.html" class="footer__navigation__list-link">Blog</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Design Services</a>
+            <a href="#" class="footer__navigation__list-link">Design Services</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Featured On</a>
+            <a href="#" class="footer__navigation__list-link">Featured On</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">2018 Holiday Catalog</a>
+            <a href="#" class="footer__navigation__list-link">2018 Holiday Catalog</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Shop By Designer</a>
+            <a href="#" class="footer__navigation__list-link">Shop By Designer</a>
           </li>
 
         </ul>
@@ -262,27 +279,27 @@
         <h2 class="footer__navigation__title">Customer Information</h2>
         <ul class="footer__navigation__list">
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Contact Us</a>
+            <a href="./pages/contact.html" class="footer__navigation__list-link">Contact Us</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Sale Exclusions</a>
+            <a href="#" class="footer__navigation__list-link">Sale Exclusions</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Shipping & Returns</a>
+            <a href="#" class="footer__navigation__list-link">Shipping & Returns</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Terms & Conditions</a>
+            <a href="#" class="footer__navigation__list-link">Terms & Conditions</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Privacy Policy</a>
+            <a href="#" class="footer__navigation__list-link">Privacy Policy</a>
           </li>
 
           <li class="footer__navigation__list-item">
-            <a href="" class="footer__navigation__list-link">Search</a>
+            <a href="#" class="footer__navigation__list-link">Search</a>
           </li>
         </ul>
       </section>
@@ -302,19 +319,19 @@
 
         <ul class="footer__navigation__list footer-list">
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--feecbook"></a>
+            <a href="https://ru-ru.facebook.com/" class="footer-list__link footer-list__link--feecbook"></a>
           </li>
 
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--twitter"></a>
+            <a href="https://twitter.com/?lang=ru" class="footer-list__link footer-list__link--twitter"></a>
           </li>
 
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--pinterest"></a>
+            <a href="https://ru.pinterest.com/" class="footer-list__link footer-list__link--pinterest"></a>
           </li>
 
           <li class="footer-list__item">
-            <a href="" class="footer-list__link footer-list__link--instagram"></a>
+            <a href="https://www.instagram.com/" class="footer-list__link footer-list__link--instagram"></a>
           </li>
         </ul>
       </section>
@@ -357,34 +374,49 @@
     </div>
   </footer>
 
-  <section class="feedback">
-    <h2 class="">Обратная связь</h2>
-    <button class="feedback__close"></button>
+  <section class="feedback popup">
+    <h2 class="visually-hidden">Обратная связь</h2>
 
     <form class="feedback-form" action="" method="post" name="form-popup">
       <fieldset class="feedback-form__data fieldset">
-        <label class="" for="name">Name</label>
-        <input class="feedback-form__data__name" id="name" type="text" name="name">
+        <div class="feedback-form__wrap-input">
+          <label class="feedback-form__data__label" for="name">Name</label>
+          <input class="feedback-form__data__input" id="name" type="text" name="name">
+        </div>
 
-        <label class="" for="phone">Phone</label>
-        <input class="feedback-form__data__phone" id="phone" type="text" name="phone">
+        <div class="feedback-form__wrap-input feedback-form__wrap-input--phone">
+          <label class="feedback-form__data__label" for="phone">Phone</label>
+          <input class="feedback-form__data__input" id="phone" type="text" name="phone">
+        </div>
 
-        <label class="" for="email">Email</label>
-        <input class="feedback-form__data__email" id="email" type="email" name="email">
+        <div class="feedback-form__wrap-input feedback-form__wrap-input--email">
+          <label class="feedback-form__data__label" for="email">Email</label>
+          <input class="feedback-form__data__input" id="email" type="email" name="email">
+        </div>
 
-        <label class="" for="message">Message</label>
-        <textarea class="feedback-form__data__message" id="message" name="message"></textarea>
+        <div class="feedback-form__wrap-input">
+          <label class="feedback-form__data__label" for="message">Message</label>
+          <textarea class="feedback-form__data__input feedback-form__data__input--textarea" id="message"
+                    name="message"></textarea>
+        </div>
       </fieldset>
 
-      <fieldset class="feedback-form__personal-data fieldset">
-        <label class="" for="agreement">By clicking on the button, you consent to the processing of your personal
-                                        data
+      <fieldset class="feedback-form__personal-data fieldset checkbox-wrap">
+        <input class="visually-hidden checkbox" id="agreement" type="checkbox" name="agreement">
+        <label class="feedback-form__personal-data__label checkbox__homemade" for="agreement">By clicking on the button,
+                                                                                              you consent to the
+                                                                                              processing of your
+                                                                                              personal
+                                                                                              data
         </label>
-        <input class="feedback-form__personal-data__agreement" id="agreement" type="checkbox" name="agreement">
       </fieldset>
 
-      <button class="feedback-form__submit" type="submit" disabled>Submit</button>
+      <button class="feedback-form__submit link" type="submit" disabled>Submit</button>
+
+      <button class="popup__close" aria-label="Закрыть попап"></button>
     </form>
   </section>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
