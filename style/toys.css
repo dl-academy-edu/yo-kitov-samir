@@ -6,7 +6,10 @@
 
 /*options__form*/
 .options__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 42px 0 28px;
 }
@@ -29,6 +32,8 @@
   width: 188px;
   height: 4px;
   background: var(--bg-range);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--brow)), to(var(--brow)));
+  background-image: -o-linear-gradient(var(--brow), var(--brow));
   background-image: linear-gradient(var(--brow), var(--brow));
   background-size: 50% 100%;
   background-repeat: no-repeat;
@@ -42,6 +47,7 @@
   border-radius: 50%;
   background: var(--basic-white);
   cursor: pointer;
+  -webkit-box-shadow: 0 0 2px 0 #555;
   box-shadow: 0 0 2px 0 #555;
   border: 8px solid var(--brow);
 }
@@ -59,6 +65,7 @@
 
 .options__form__range[type=range]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
   background: transparent;
@@ -66,8 +73,13 @@
 
 /*options__form__slider__wrap-numbers*/
 .options__form__slider__wrap-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -111,6 +123,10 @@
 
   border-radius: 50%;
 
+  -webkit-transform: translateY(-50%);
+
+  -ms-transform: translateY(-50%);
+
   transform: translateY(-50%);
 
   width: 20px;
@@ -147,7 +163,11 @@
 /*options__form__amount*/
 .options__form__amount {
   margin-right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
@@ -181,36 +201,7 @@
 }
 
 .options__form__submit {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   margin-top: 37px;
 }
-
-/**toys**/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
